@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+
 /**
  * Example JPA entity.
  *
@@ -23,9 +24,13 @@ import javax.persistence.Id;
  * }
  */
 @Entity
-public class MyEntity {
+public class Customers {
     private Long id;
-    private String field;
+    private String name;
+
+    private String phone_number;
+    private String email;
+
 
     @Id
     @GeneratedValue
@@ -37,11 +42,29 @@ public class MyEntity {
         this.id = id;
     }
 
-    public String getField() {
-        return field;
+    public String getName() {
+        return name;
     }
 
-    public void setField(String field) {
-        this.field = field;
+    public void setName(String field) {
+        this.name = name;
     }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhonenumber() {
+        return phone_number;
+    }
+
+    public void setPhonenumber(String phone_number) {
+        this.phone_number = phone_number;
+    }
+
+
 }
